@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" class="selection:bg-blue-100/10 bg-[#0E1013]">
+
+    <head>
+        <link rel="icon" href="downpour.ico">
+        <title>Wintertale: Дополнения</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Wintertale, спокойный сервер для комфортной игры">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preload" as="image" href="assets/background.jpg">
+        <link rel="preload" as="image" href="assets/extra_background.jpg">
+        <style>
+            @keyframes fly {
+            0%   { transform: translate(0,0); }
+            40%  { transform: translate(30px,-40px); }
+            70%  { transform: translate(-20px,-10px); }
+            100% { transform: translate(10px,20px); }
+            }
+
+            @keyframes blink {
+            0%,100% { opacity: 0; }
+            50%     { opacity: 1; }
+            }
+
+            @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+            }
+
+            .fade-in {
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            }
+
+            .pre-fade {
+                opacity: 0;
+            }
+
+            #parallax {
+            transition: background-position 0.25s ease-out;
+            }
+
+            ::-webkit-scrollbar {
+            width: 9px;
+            }
+
+            ::-webkit-scrollbar-track {
+            background: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+            background: rgba(219, 234, 254, 0.15);
+            border-radius: 32px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+            background: rgba(219, 234, 254, 0.25);
+            }
+        </style>
+    </head>
+
+    <body class="text-md font-[Jost] text-blue-50">
+        <section id="parallax" class="flex relative min-h-[calc(100dvh+2px)] bg-[url(assets/extra_background.jpg)] bg-cover bg-center overflow-hidden shadow-[inset_0_0_200px_80px_rgba(0,0,0,0.6)]">
+
+            <!-- overlays -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-[24px]"></div>
+
+                <!-- fireflies -->
+                <div class="absolute inset-0 pointer-events-none mix-blend-overlay">
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[12%] left-[18%] delay-[0s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[68%] left-[8%] delay-[1s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_4s_ease-in-out_infinite]
+                        top-[40%] left-[82%] delay-[2s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_5s_ease-in-out_infinite]
+                        top-[18%] left-[55%] delay-[3s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_4s_ease-in-out_infinite]
+                        top-[82%] left-[63%] delay-[4s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[54%] left-[22%] delay-[5s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] blur-[1px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[32%] left-[71%] delay-[6s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[12%] left-[18%] delay-[0s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[68%] left-[8%] delay-[1s]"></span>
+                </div>
+
+                <div class="absolute inset-0 bg-[url(assets/noise.png)] bg-repeat"></div>
+            </div>
+
+            <!-- topbar -->
+            <div id="topbar" class="fixed flex z-1 top-6 md:top-10 left-0 right-0 justify-center select-none h-14">
+
+                <div class="transition with-fade pre-fade
+                bg-blue-100/4 backdrop-blur-[32px] flex rounded-2xl outline-2 outline-blue-100/20 hover:outline-blue-100/30 outline-offset-2 items-center justify-center
+                shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                hover:-translate-y-[2px]">
+                    <a href="downpour.html"><img src="assets/logo_wintertale_simplified.svg" draggable="false"
+                    class="py-4 px-4 md:px-6 h-14 opacity-80 hover:bg-blue-100/5 rounded-r-md rounded-l-2xl transition"></a>
+                    <a href="addons.html" class="tracking-wide
+                    transition text-sm text-blue-100/80 hover:text-blue-100/90 hover:bg-blue-100/5 h-full px-2 md:px-4 flex justify-center items-center rounded-md">дополнения</a>
+                    <a href="rules.html" class="tracking-wide
+                    transition text-sm text-blue-100/80 hover:text-blue-100/90 hover:bg-blue-100/5 h-full px-2 md:px-4 flex justify-center items-center rounded-l-md rounded-r-2xl">правила сообщества</a>
+                </div>
+
+                <div class="with-fade pre-fade w-[14px] h-[2px] bg-gradient-to-l from-blue-100/0 via-blue-100/10 to-blue-100/0 self-center m-[4px]"></div>
+
+                <a href="https://discord.gg/W69E9mBWGS" target="_blank" class="with-fade pre-fade bg-blue-100/4 aspect-square backdrop-blur-[32px] transition flex rounded-2xl outline-2 outline-blue-100/20 hover:outline-blue-100/30 outline-offset-2 items-center justify-center
+                shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                hover:-translate-y-[2px]">
+                    <img src="assets/logo_discord.svg" draggable="false" class="h-full p-4 opacity-80 hover:bg-blue-100/5 rounded-2xl">
+                </a>
+
+            </div>
+
+            <div class="with-fade pre-fade relative flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 py-8">
+
+                <div class="md:my-35 my-25 max-w-7xl">
+
+                    <div class="max-w-xl text-center">
+                        <h2 class="text-3xl font-[Gabriela] font-medium text-center mb-4">Документация в активной разработке</h2>
+                        <p class="opacity-60">однако информация об активных серверных изменениях уже есть в игре, /addons</p>
+                    </div>
+
+                </div>
+
+                <div class="relative text-xs"></div>
+            </div>
+
+            <div class="absolute bottom-0 bg-blue-100/10 h-[2px] w-full pointer-events-none"></div>
+        </section>
+
+        <footer class="relative flex overflow-hidden">
+            <div class="with-fade pre-fade relative flex items-center justify-center gap-4 w-full max-w-7xl mx-auto px-4 py-8">
+                
+                <img src="assets/logo_wintertale.svg" class="w-28 select-none hover:animate-pulse transition" draggable="false">
+                <separator class="h-full bg-gradient-to-b from-blue-100/0 via-blue-100/10 to-blue-100/0 w-[2px]"></separator>
+                <div class="flex flex-col gap-1">
+                    <p class="select-none text-xs uppercase tracking-widest">Wintertale <script>document.write(new Date().getFullYear())</script></p>
+                    <p class="select-none text-xs uppercase tracking-widest opacity-40">
+                        in development by
+                        <a href="https://www.github.com/ywdeh" target="_blank" class="hover:border-b-[2px]">Hedwy</a>
+                        and his fellow friends  
+                    </p>
+                    <separator class="w-full bg-gradient-to-r from-blue-100/0 via-blue-100/10 to-blue-100/0 h-[2px] my-1"></separator>
+                    <p class="select-none text-xs uppercase tracking-widest opacity-40">background art by
+                        <a href="https://www.artstation.com/kouwei" target="_blank" class="hover:border-b-[2px]">kouwei</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="absolute bottom-0 bg-blue-100/10 h-[2px] w-full pointer-events-none"></div>
+        </footer>
+
+        <audio id="hover-sound" src="assets/hover.mp3" preload="auto"></audio>
+        <script>
+        function copyIP() {
+            navigator.clipboard.writeText("wt-de.hedwy.art");
+            };
+
+        window.addEventListener('load', () => {
+        const elements = document.querySelectorAll('.with-fade');
+        elements.forEach(el => {
+            el.classList.remove('pre-fade');
+            el.classList.add('fade-in');
+            });
+        });
+
+        const parallaxSection = document.getElementById('parallax');
+        window.addEventListener('mousemove', (e) => {
+        if (!parallaxSection) return;
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const xOffset = (x - 0.5) * 20;
+        const yOffset = (y - 0.5) * 20;
+        parallaxSection.style.backgroundPosition = `calc(50% - ${xOffset}px) calc(50% - ${yOffset}px)`;
+        });
+
+        const hoverSound = document.getElementById("hover-sound");
+        hoverSound.volume = 0.1;
+
+        document.querySelectorAll("button, a").forEach(el => {
+            el.addEventListener("click", () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+        });
+
+        </script>
+    </body>
+
+</html>

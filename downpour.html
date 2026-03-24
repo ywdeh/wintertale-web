@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" class="selection:bg-blue-100/10 bg-[#0E1013]">
+
+    <head>
+        <link rel="icon" href="downpour.ico">
+        <title>Wintertale</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Wintertale, спокойный сервер для комфортной игры">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preload" as="image" href="assets/background.jpg">
+        <link rel="preload" as="image" href="assets/extra_background.jpg">
+        <style>
+            @keyframes fly {
+            0%   { transform: translate(0,0); }
+            40%  { transform: translate(30px,-40px); }
+            70%  { transform: translate(-20px,-10px); }
+            100% { transform: translate(10px,20px); }
+            }
+
+            @keyframes blink {
+            0%,100% { opacity: 0; }
+            50%     { opacity: 1; }
+            }
+
+            @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+            }
+
+            .fade-in {
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            }
+
+            .pre-fade {
+                opacity: 0;
+            }
+
+            #parallax {
+            transition: background-position 0.25s ease-out;
+            }
+
+            ::-webkit-scrollbar {
+            width: 9px;
+            }
+
+            ::-webkit-scrollbar-track {
+            background: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+            background: rgba(219, 234, 254, 0.15);
+            border-radius: 32px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+            background: rgba(219, 234, 254, 0.25);
+            }
+        </style>
+    </head>
+
+    <body class="text-md font-[Jost] text-blue-50">
+        <section id="parallax" class="flex relative min-h-[calc(100dvh+2px)] bg-[url(assets/extra_background.jpg)] bg-cover bg-center overflow-hidden shadow-[inset_0_0_200px_80px_rgba(0,0,0,0.6)]">
+
+            <!-- overlays -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute inset-0 bg-gray-900/50 backdrop-blur-[10px]"></div>
+
+                <!-- fireflies -->
+                <div class="absolute inset-0 pointer-events-none mix-blend-overlay">
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[12%] left-[18%] delay-[0s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[68%] left-[8%] delay-[1s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_4s_ease-in-out_infinite]
+                        top-[40%] left-[82%] delay-[2s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_5s_ease-in-out_infinite]
+                        top-[18%] left-[55%] delay-[3s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_4s_ease-in-out_infinite]
+                        top-[82%] left-[63%] delay-[4s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[54%] left-[22%] delay-[5s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] blur-[1px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[32%] left-[71%] delay-[6s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_2s_ease-in-out_infinite]
+                        top-[12%] left-[18%] delay-[0s]"></span>
+
+                    <span class="absolute w-[6px] h-[6px] rounded-full
+                        bg-[radial-gradient(circle,rgba(239,246,255,1)_0%,rgba(239,246,255,0)_70%)]
+                        opacity-0 animate-[fly_9s_linear_infinite,blink_3s_ease-in-out_infinite]
+                        top-[68%] left-[8%] delay-[1s]"></span>
+                </div>
+
+                <div class="absolute inset-0 bg-[url(assets/noise.png)] bg-repeat"></div>
+            </div>
+
+            <!-- topbar -->
+            <div id="topbar" class="fixed flex z-1 top-6 md:top-10 left-0 right-0 justify-center select-none h-14">
+
+                <div class="transition with-fade pre-fade
+                bg-blue-100/4 backdrop-blur-[32px] flex rounded-2xl outline-2 outline-blue-100/20 hover:outline-blue-100/30 outline-offset-2 items-center justify-center
+                shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                hover:-translate-y-[2px]">
+                    <a href="downpour.html"><img src="assets/logo_wintertale_simplified.svg" draggable="false"
+                    class="py-4 px-4 md:px-6 h-14 opacity-80 hover:bg-blue-100/5 rounded-r-md rounded-l-2xl transition"></a>
+                    <a href="addons.html" class="tracking-wide
+                    transition text-sm text-blue-100/80 hover:text-blue-100/90 hover:bg-blue-100/5 h-full px-2 md:px-4 flex justify-center items-center rounded-md">дополнения</a>
+                    <a href="rules.html" class="tracking-wide
+                    transition text-sm text-blue-100/80 hover:text-blue-100/90 hover:bg-blue-100/5 h-full px-2 md:px-4 flex justify-center items-center rounded-l-md rounded-r-2xl">правила сообщества</a>
+                </div>
+
+                <div class="with-fade pre-fade w-[14px] h-[2px] bg-gradient-to-l from-blue-100/0 via-blue-100/10 to-blue-100/0 self-center m-[4px]"></div>
+
+                <a href="https://discord.gg/W69E9mBWGS" target="_blank" class="with-fade pre-fade bg-blue-100/4 aspect-square backdrop-blur-[32px] transition flex rounded-2xl outline-2 outline-blue-100/20 hover:outline-blue-100/30 outline-offset-2 items-center justify-center
+                shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                hover:-translate-y-[2px]">
+                    <img src="assets/logo_discord.svg" draggable="false" class="h-full p-4 opacity-80 hover:bg-blue-100/5 rounded-2xl">
+                </a>
+
+            </div>
+
+            <div class="with-fade pre-fade relative flex flex-col justify-center text-center w-full max-w-7xl mx-auto px-4 py-8">
+
+                <div class="-translate-y-5">
+                    <!-- slogan -->
+                    <div class="flex items-center mb-16">
+                        <div class="flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0 rounded-full"></div>
+                        <p class="flex mx-4 select-none uppercase text-xs font-medium tracking-[.15em] text-blue-50/50">
+                            Minecraft Java, лицензия
+                        </p>
+                        <div class="flex-1 h-[2px] bg-gradient-to-l from-blue-100/0 to-blue-100/10 rounded-full"></div>
+                    </div>
+                    <h1 class="font-[Gabriela]
+                    text-4xl/[50px] md:text-6xl/[80px]
+                    drop-shadow-[0_0_32px_rgba(0,0,0,0.2)]">
+                        Спокойный сервер<br>
+                        для <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-sky-200">комфортной</span> игры
+                    </h1>
+
+                    <!-- buttons row -->
+                    <div class="flex items-center mt-16">
+                        <div class="shadow-[0_0_32px_rgba(0,0,0,1)] flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0"></div>
+                        <!-- -->
+                        <div class="relative flex justify-center">
+                            <button onclick="copyIP()" class="peer gap-4 group
+                            cursor-pointer flex items-center justify-center h-16 px-7 rounded-2xl border-2
+                            border-blue-100/10 hover:border-blue-100/20 active:border-blue-100/40
+                            text-blue-50/80 hover:text-blue-50/90
+                            shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                            transition hover:-translate-y-[2px]">
+                                <span class="tracking-[.25em] uppercase text-xs font-medium">wt-de.hedwy.art</span>
+                                <div class="relative">
+                                    <div class="animate-ping absolute top-0 rotate-45 size-2 bg-emerald-500 blur-[1px] opacity-60 shadow-[0_0_16px_rgba(16,185,129,1)]"></div>
+                                    <div class="self-center rotate-45 size-2 bg-emerald-800 border-2 border-emerald-500 shadow-[0_0_16px_rgba(16,185,129,1)]"></div>
+                                </div>
+                            </button>
+                            <p class="transition absolute -bottom-7 select-none uppercase text-xs font-medium tracking-[.15em] text-blue-50/0 peer-hover:text-blue-50/50">копировать</p>
+                        </div>
+                        <div class="shadow-[0_0_32px_rgba(0,0,0,1)] flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0 rotate-180"></div>
+                    </div>
+                </div>
+
+                <div class="relative text-xs"></div>
+            </div>
+
+            <div class="absolute bottom-0 bg-blue-100/10 h-[2px] w-full pointer-events-none"></div>
+        </section>
+
+        <footer class="relative flex overflow-hidden">
+            <div class="with-fade pre-fade relative flex items-center justify-center gap-4 w-full max-w-7xl mx-auto px-4 py-8">
+                
+                <img src="assets/logo_wintertale.svg" class="w-28 select-none hover:animate-pulse transition" draggable="false">
+                <separator class="h-full bg-gradient-to-b from-blue-100/0 via-blue-100/10 to-blue-100/0 w-[2px]"></separator>
+                <div class="flex flex-col gap-1">
+                    <p class="select-none text-xs uppercase tracking-widest">Wintertale <script>document.write(new Date().getFullYear())</script></p>
+                    <p class="select-none text-xs uppercase tracking-widest opacity-40">
+                        in development by
+                        <a href="https://www.github.com/ywdeh" target="_blank" class="hover:border-b-[2px]">Hedwy</a>
+                        and his fellow friends  
+                    </p>
+                    <separator class="w-full bg-gradient-to-r from-blue-100/0 via-blue-100/10 to-blue-100/0 h-[2px] my-1"></separator>
+                    <p class="select-none text-xs uppercase tracking-widest opacity-40">background art by
+                        <a href="https://www.artstation.com/kouwei" target="_blank" class="hover:border-b-[2px]">kouwei</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="absolute bottom-0 bg-blue-100/10 h-[2px] w-full pointer-events-none"></div>
+        </footer>
+
+        <audio id="hover-sound" src="assets/hover.mp3" preload="auto"></audio>
+        <script>
+        function copyIP() {
+            navigator.clipboard.writeText("wt-de.hedwy.art");
+            };
+
+        window.addEventListener('load', () => {
+        const elements = document.querySelectorAll('.with-fade');
+        elements.forEach(el => {
+            el.classList.remove('pre-fade');
+            el.classList.add('fade-in');
+            });
+        });
+
+        const parallaxSection = document.getElementById('parallax');
+        window.addEventListener('mousemove', (e) => {
+        if (!parallaxSection) return;
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const xOffset = (x - 0.5) * 20;
+        const yOffset = (y - 0.5) * 20;
+        parallaxSection.style.backgroundPosition = `calc(50% - ${xOffset}px) calc(50% - ${yOffset}px)`;
+        });
+
+        const hoverSound = document.getElementById("hover-sound");
+        hoverSound.volume = 0.1;
+
+        document.querySelectorAll("button, a").forEach(el => {
+            el.addEventListener("click", () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+        });
+
+        </script>
+    </body>
+
+</html>
