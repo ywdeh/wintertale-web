@@ -1,0 +1,4 @@
+/node_modules
+/downpour
+.DS_Store
+.env

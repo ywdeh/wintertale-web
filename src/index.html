@@ -1,0 +1,66 @@
+---
+title: Wintertale
+layout: template.html
+---
+
+{% include "fixed_top.html" %}
+
+<section id="parallax" class="flex relative min-h-[calc(100dvh+2px)] bg-[url(/assets/extra_background.jpg)] bg-cover bg-fixed bg-center overflow-hidden shadow-[inset_0_0_200px_80px_rgba(0,0,0,0.6)]">
+
+    <!-- overlays -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 bg-gray-900/50 backdrop-blur-[10px]"></div>
+
+        {% include "effect_fireflies.html" %}
+
+        <div class="absolute inset-0 bg-[url(/assets/noise.png)] bg-repeat"></div>
+    </div>
+
+    <div class="with-fade pre-fade relative flex flex-col justify-center text-center w-full max-w-7xl mx-auto px-4 py-8">
+
+        <div class="-translate-y-5">
+            <!-- slogan -->
+            <div class="flex items-center mb-16">
+                <div class="flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0 rounded-full"></div>
+                <p class="flex mx-4 select-none uppercase text-xs font-medium tracking-[.15em] text-blue-50/50">
+                    Minecraft Java, лицензия
+                </p>
+                <div class="flex-1 h-[2px] bg-gradient-to-l from-blue-100/0 to-blue-100/10 rounded-full"></div>
+            </div>
+            <h1 class="font-[Gabriela]
+            text-4xl/[50px] md:text-6xl/[80px]
+            drop-shadow-[0_0_32px_rgba(0,0,0,0.2)]">
+                Спокойный сервер<br>
+                для <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-sky-200">комфортной</span> игры
+            </h1>
+
+            <!-- buttons row -->
+            <div class="flex items-center mt-16">
+                <div class="shadow-[0_0_32px_rgba(0,0,0,1)] flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0"></div>
+                <!-- -->
+                <div class="relative flex justify-center">
+                    <button onclick="copyIP()" class="tap-sound peer gap-4 group
+                    cursor-pointer flex items-center justify-center h-16 px-7 rounded-2xl border-2
+                    border-blue-100/10 hover:border-blue-100/20 active:border-blue-100/40
+                    text-blue-50/80 hover:text-blue-50/90
+                    shadow-[0_0_32px_rgba(0,0,0,0.2)] hover:shadow-[0_0_86px_rgba(248,250,252,0.15)] active:shadow-[0_0_124px_rgba(248,250,252,0.2)]
+                    transition hover:-translate-y-[2px]">
+                        <span class="tracking-[.25em] uppercase text-xs font-medium">wt-de.hedwy.art</span>
+                        <div class="relative">
+                            <div class="animate-ping absolute top-0 rotate-45 size-2 bg-emerald-500 blur-[1px] opacity-60 shadow-[0_0_16px_rgba(16,185,129,1)]"></div>
+                            <div class="self-center rotate-45 size-2 bg-emerald-800 border-2 border-emerald-500 shadow-[0_0_16px_rgba(16,185,129,1)]"></div>
+                        </div>
+                    </button>
+                    <p class="transition absolute -bottom-7 select-none uppercase text-xs font-medium tracking-[.15em] text-blue-50/0 peer-hover:text-blue-50/50">копировать</p>
+                </div>
+                <div class="shadow-[0_0_32px_rgba(0,0,0,1)] flex-1 h-[2px] bg-gradient-to-l from-blue-100/10 to-blue-100/0 rotate-180"></div>
+            </div>
+        </div>
+
+        <div class="relative text-xs"></div>
+    </div>
+
+    <div class="absolute bottom-0 bg-blue-100/10 h-[2px] w-full pointer-events-none"></div>
+</section>
+
+{% include "fixed_bottom.html" %}
